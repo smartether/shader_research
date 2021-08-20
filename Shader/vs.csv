@@ -1,0 +1,41 @@
+Name,Value,Type
+InverseWorld,,float4x4 (column_major)
+InverseWorld.row0,"0.98188, 0.00, 0.18952, 14.43973",float4
+InverseWorld.row1,"0.00, 1.00, 0.00, 11.41",float4
+InverseWorld.row2,"-0.18952, 0.00, 0.98188, 29.9593",float4
+InverseWorld.row3,"0.00, 0.00, 0.00, 1.00",float4
+LightProbeSHLow,,float4[3]
+LightProbeSHLow[0],"0.04769, 0.11834, 0.04472, 0.26812",float4
+LightProbeSHLow[1],"0.02235, 0.06351, 0.02956, 0.15768",float4
+LightProbeSHLow[2],"0.01852, 0.0726, 0.03905, 0.15089",float4
+LightViewProj,,float4x4 (column_major)[4]
+LightViewProj[0],,float4x4 (column_major)
+LightViewProj[0].row0,"0.07257, 0.01816, 0.03072, 1.5796",float4
+LightViewProj[0].row1,"0.00, -0.06961, 0.04116, 1.20602",float4
+LightViewProj[0].row2,"0.02473, -0.0256, -0.0433, -1.12534",float4
+LightViewProj[0].row3,"0.00, 0.00, 0.00, 1.00",float4
+LightViewProj[1],,float4x4 (column_major)
+LightViewProj[1].row0,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[1].row1,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[1].row2,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[1].row3,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[2],,float4x4 (column_major)
+LightViewProj[2].row0,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[2].row1,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[2].row2,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[2].row3,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[3],,float4x4 (column_major)
+LightViewProj[3].row0,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[3].row1,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[3].row2,"0.00, 0.00, 0.00, 0.00",float4
+LightViewProj[3].row3,"0.00, 0.00, 0.00, 0.00",float4
+ViewProjection,,float4x4 (column_major)
+ViewProjection.row0,"-2.37441, -8.49569E-06, -0.00425, -33.15492",float4
+ViewProjection.row1,"0.00002, 5.14451, -0.02058, 15.09529",float4
+ViewProjection.row2,"0.00179, -0.004, -1.00019, 18.44887",float4
+ViewProjection.row3,"0.00179, -0.004, -0.99999, 20.44498",float4
+World,,float4x4 (column_major)
+World.row0,"0.98188, 0.00, -0.18952, -8.50",float4
+World.row1,"0.00, 1.00, 0.00, -11.41",float4
+World.row2,"0.18952, 0.00, 0.98188, -32.153",float4
+World.row3,"0.00, 0.00, 0.00, 1.00",float4

@@ -1,0 +1,45 @@
+Name,Value,Type
+AlphaMtl,"1.00",float
+BaseColor,"1.00, 1.00, 1.00, 1.00",float4
+CameraPosition,"-14.00, -2.85247, 20.43154",float3
+ColorAdjust,"0.00, 0.00",float2
+DetailNormalIntensity,"0.40",float
+DetailTexTilling,"20.00",float
+DirLightAttr,,float4[5]
+DirLightAttr[0],"0.00, 0.00, 0.00, 0.00",float4
+DirLightAttr[1],"1.3007, 1.21836, 1.50, 0.00",float4
+DirLightAttr[2],"0.00, 0.00, 0.00, 0.00",float4
+DirLightAttr[3],"0.44535, -0.33426, -0.83062, 0.001",float4
+DirLightAttr[4],"1.00, 0.00, 0.00, 0.00",float4
+FillLightColor,"1.74271, 1.53769, 1.74271, 1.00",float4
+FillLightDirection,"5.50, 1.44247, -52.58454, 1.00",float4
+Intensity,"1.00, 1.00, 1.00, 0.00",float4
+PointLightAttrs,,float4[5]
+PointLightAttrs[0],"0.00, 0.00, 0.00, 0.00",float4
+PointLightAttrs[1],"28274.34961, 13791.25977, 9190.20898, 0.00",float4
+PointLightAttrs[2],"0.00, 0.00, 0.00, 0.00",float4
+PointLightAttrs[3],"-59.4692, 40.80048, -131.47708, 0.00067",float4
+PointLightAttrs[4],"1.00, 0.00, 0.00, 0.00",float4
+PointLightNonShadowNum,"1",int
+ReflectionProbeBoxProjA,,float4[3]
+ReflectionProbeBoxProjA[0],"1.00, -2.97261, 8.74605, -16.55536",float4
+ReflectionProbeBoxProjA[1],"211.82893, 159.51767, 262.79236, 1.00",float4
+ReflectionProbeBoxProjA[2],"-217.77415, -142.02557, -295.90308, 1.00",float4
+ReflectionProbeBoxProjB,,float4[3]
+ReflectionProbeBoxProjB[0],"0.00, 0.00, 0.00, 0.00",float4
+ReflectionProbeBoxProjB[1],"0.00, 0.00, 0.00, 0.00",float4
+ReflectionProbeBoxProjB[2],"0.00, 0.00, 0.00, 0.00",float4
+ReflectionProbeInfo,"1.00, 7.00, -0.77247, 0.00",float4
+ReflectionProbeNormalized,"0, 0",int2
+ShadowInfo,"0.44125, -0.45671, -0.77247, 0.00",float4
+SpotLightAttrs,,float4[9]
+SpotLightAttrs[0],"0.00, 0.00, 0.00, 0.00",float4
+SpotLightAttrs[1],"0.00, 0.00, 0.00, 0.00",float4
+SpotLightAttrs[2],"0.00, 0.00, 0.00, 0.00",float4
+SpotLightAttrs[3],"0.00, 0.00, 0.00, 0.00",float4
+SpotLightAttrs[4],"0.00, 0.00, 0.00, 0.00",float4
+SpotLightAttrs[5],"0.00, 0.00, 0.00, 0.00",float4
+SpotLightAttrs[6],"0.00, 0.00, 0.00, 0.00",float4
+SpotLightAttrs[7],"0.00, 0.00, 0.00, 0.00",float4
+SpotLightAttrs[8],"0.00, 0.00, 0.00, 0.00",float4
+SpotLightNonShadowNum,"0",int
