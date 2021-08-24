@@ -134,10 +134,14 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 1
     m_Colors:
+    - AdditionLightColor: {r: 0.5, g: 0.5, b: 0.5, a: 0}
+    - AdditionLightDir: {r: 0, g: -1, b: 0, a: 0}
     - BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - CameraPosition: {r: -14, g: -2.85247, b: 20.43154, a: 0}
     - ColorAdjust: {r: 0, g: 0, b: 0, a: 0}
     - Intensity: {r: 1, g: 1, b: 1, a: 0}
+    - ReflectionProbeInfo: {r: 1, g: 7, b: -0.77247, a: 0}
+    - ShadowInfo: {r: 0.44125, g: -0.45671, b: -0.77247, a: 0}
     - _1316: {r: 0, g: 0, b: 0, a: 0}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
