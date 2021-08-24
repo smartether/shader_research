@@ -9,9 +9,9 @@
 #define ViewProjection unity_MatrixVP
 
 uniform vec4 LightProbeSHLow[3];
-// uniform mat4 World;
-// uniform mat4 InverseWorld;
-// uniform mat4 ViewProjection;
+uniform mat4 World;
+uniform mat4 InverseWorld;
+uniform mat4 ViewProjection;
 uniform mat4 LightViewProj[4];
 
 layout(location = 0) in vec4 position;

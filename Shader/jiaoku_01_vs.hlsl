@@ -55,6 +55,7 @@ struct STVaring
 // static float4 LightProbeSHLow[3];
 // static float4x4 LightViewProj[4];
 uniform float4x4 unity_WorldToLight;
+uniform float4x4 unity_WorldToShadow;
 
 void vert_main()
 {
@@ -73,6 +74,8 @@ void vert_main()
     float4 _964 = mul(ViewProjection, _870);
     float3 _896 = normalize(mul((float3x3)World,normal_in));//,(float3x3)InverseWorld));
     float3 _908 = normalize(mul((float3x3)World,_1314));
+    
+    /*
     float4 _978 = float4(_896, 1.0f);
     float3 _1301 = _1316;
     _1301.x = dot(LightProbeSHLow[0], _978);
@@ -87,12 +90,14 @@ void vert_main()
     _1309.y = dot(LightProbeSHLow[1], _1015);
     float3 _1311 = _1309;
     _1311.z = dot(LightProbeSHLow[2], _1015);
+    */
 
     half3 shcol = SampleSHVertex(_896);
-
-    float4x4 lightViewProj = unity_WorldToLight;
+    /*
+    float4x4 lightViewProj;
     float4 _1044 = mul(lightViewProj, _870);
     float3 _940 = (_1044.xyz + _1044.w.xxx) * 0.5f;
+    */
     float3 _956 = (_964.xyz + _964.w.xxx) * 0.5f;
     gl_Position = _964;
     v2f_position_local = _835.xyz;
@@ -102,11 +107,11 @@ void vert_main()
     v2f_normal = _896;
     v2f_tangent = _908;
     v2f_binormal = cross(_896, _908) * ((step(length(tangent_in), 2.0f) * 2.0f) - 1.0f);
-    v2f_sh = clamp(float4(_1305, 1.0f), 0.0f.xxxx, 10.0f.xxxx);
+    //v2f_sh = clamp(float4(_1305, 1.0f), 0.0f.xxxx, 10.0f.xxxx);
     v2f_sh = clamp(float4(shcol, 1.0f), 0.0, 10.0);
-    v2f_sh2 = clamp(float4(_1311, 1.0f), 0.0f.xxxx, 10.0f.xxxx);
+    //v2f_sh2 = clamp(float4(_1311, 1.0f), 0.0f.xxxx, 10.0f.xxxx);
     v2f_uv = float4(texcoord0.x, texcoord0.y, 0.0f, 0.0f);
-    v2f_shadow_pos = float4(_940.x, _940.y, _940.z, _1044.w);
+    //v2f_shadow_pos = float4(_940.x, _940.y, _940.z, _1044.w);
     v2f_lm_scale = 0.0f.xxx;
     v2f_lm_add = 0.0f.xxx;
 }

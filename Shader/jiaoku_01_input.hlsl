@@ -17,6 +17,9 @@ float DetailTexTilling;
 float4 BaseColor;
 float DetailNormalIntensity;
 float4 Intensity;
+float4 AdditionLightDir;
+float4 AdditionLightColor;
+
 float4 DirLightAttr[5];
 float4 ShadowInfo;
 int PointLightNonShadowNum;

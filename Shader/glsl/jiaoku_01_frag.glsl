@@ -12,7 +12,7 @@ uniform vec4 ReflectionProbeInfo;
 uniform vec4 ReflectionProbeBoxProjA[3];
 uniform ivec2 ReflectionProbeNormalized;
 uniform vec4 ReflectionProbeBoxProjB[3];
-uniform vec4 DirLightAttr[5];
+// uniform vec4 DirLightAttr[5];
 uniform vec4 ShadowInfo;
 uniform vec4 PointLightAttrs[5];
 uniform int PointLightNonShadowNum;

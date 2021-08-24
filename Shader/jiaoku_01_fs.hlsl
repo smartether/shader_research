@@ -68,8 +68,8 @@ void frag_main()
 {
     // _entryPointOutput = abs(float4(0.5 * (v2f_normal + 1),1));
     // return;
-    DirLightAttr[1] = _MainLightColor;
-    DirLightAttr[3] = float4(0,-1,0,1);// normalize(_MainLightPosition);
+    DirLightAttr[1] = AdditionLightColor;
+    DirLightAttr[3] = AdditionLightDir;// normalize(_MainLightPosition);
     float3 _2128 =   v2f_position_world - _WorldSpaceCameraPos;
     float3 _2139 = _2128 / length(_2128).xxx;
     float4 _2219 = Tex0.Sample(_Tex0_sampler, v2f_uv.xy);
@@ -88,6 +88,8 @@ void frag_main()
     float2 _2362 = _2423.xy * Intensity.x;
     
     float3 _2372 = normalize(mul(normalize(float3(_2362.x, _2362.y, _2423.z)), float3x3(float3(v2f_tangent), float3(v2f_binormal), float3(v2f_normal))));
+    // _entryPointOutput = float4(v2f_normal, 1);
+    // return;
 
     // unity tangentToWorld
     //float3x3 tangentToWorld = CreateTangentToWorld(v2f_normal, v2f_tangent, 1);
@@ -112,6 +114,13 @@ void frag_main()
     float3 _5337;
     float _5310;
     float _5322;
+    
+        float4 shadowCoord = TransformWorldToShadowCoord(v2f_position_world);
+        float shadowColor = MainLightRealtimeShadow(shadowCoord);
+        // float4 shadowCoord = TransformWorldToShadowCoord(v2f_position_world);
+        // float shadowColor = MainLightRealtimeShadow(shadowCoord);
+        //  _entryPointOutput = shadowColor;
+        //  return;
     for (int _5264 = 0; _5264 < 1; _5267 = _5338, _5266 = _5337, _5264++)
     {
         float _2654 = dot(_2372, -DirLightAttr[3].xyz);
@@ -121,6 +130,7 @@ void frag_main()
             _5337 = _5266;
             continue;
         }
+/*
         float4 _2742 = v2f_shadow_pos / v2f_shadow_pos.w.xxxx;
         float3 _2744 = _2742.xyz;
         if (_2744.z > 1.0f)
@@ -130,7 +140,10 @@ void frag_main()
         else
         {
             _5310 = (ShadowMap.SampleLevel(_ShadowMap_sampler, _2742.xy, 0.0f).x < _2744.z) ? 0.0f : 1.0f;
+            _5310 = shadowColor;
         }
+*/
+        _5310 = shadowColor;
         float _2669 = _5310 + ShadowInfo.w;
         float _2673 = min(1.0f, clamp(_2669, 0.0f, 1.0f));
         float _2771 = max(_2654, 0.0f);
@@ -241,14 +254,9 @@ void frag_main()
     float3 _5302;
     for (;;)
     {
-    
-        // float3 litDir = -float3(-0.5, -0.1, -0.9);
         float3 _3546 = -(_MainLightPosition.xyz / length(_MainLightPosition.xyz));//normalize(_MainLightPosition).xyzw;
         float _3552 =dot(_2372, -_3546);
-        //  _entryPointOutput = float4(_3552.xxx, 1);
-        // return;
-        // _entryPointOutput = float4(_WorldSpaceLightPos0.xyz, 1);
-        //  return;
+
         if (_3552 <= 0.0f)
         {
             _5303 = _5297;
